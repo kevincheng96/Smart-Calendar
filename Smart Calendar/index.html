@@ -5,9 +5,9 @@
 <link href='./css/fullcalendar.css' rel='stylesheet' />
 <link href='./css/fullcalendar.print.css' rel='stylesheet' media='print' />
 <link href='./css/bootstrap.css' rel='stylesheet'/>
-<script src='./lib/moment.min.js'></script>
-<script src='./lib/jquery.min.js'></script>
-<script src='./fullcalendar.min.js'></script>
+<script src='./js/lib/moment.min.js'></script>
+<script src='./js/lib/jquery.min.js'></script>
+<script src='./js/fullcalendar.min.js'></script>
     
 <script>
 
@@ -15,15 +15,15 @@
 
 		$('#calendar').fullCalendar({
 			defaultDate: '2015-11-21',
-            defaultView: 'basicDay',
+            defaultView: 'agendaDay',
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events 
             resources: [], 
             events: [],
             header: {
-                left: '',
-                center: 'prev title next',
-                right: ''
+                left: 'prev next today',
+                center: 'title',
+                right: 'agendaDay, agendaWeek, month',
             },
             eventClick: function(event) {
                 if (event.url) {
