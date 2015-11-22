@@ -1,11 +1,11 @@
 == README
 
-#ABOUT
 This is version 0.01 of the Smart Calendar, developed for Wildhacks 2015 at Northwestern University.
 
+=== About
 The Smart Calendar aims to be a smart, responsive calendar that prioritizes your events. 
 
-#HOW IT WORKS
+=== How it works
 For example, let's pretend it's Monday. You have a history paper on the causes of the Crimean War due Thursday, at 8 AM. You need to study for a midterm on Solid State Engineering that is tomorrow, at 3 PM. Also, you need to call your mother by Friday to tell her that you are gay. All this stress!
 
 The Smart Calendar will help you prioritize these events. You will be able to rate all of your events on a scale, and through a list, you will be able to view which events or tasks you should prioritize. Therefore, you would be able to prioritize these tasks yourself based on whether you believe that your midterm, paper or coming out to your mother is more important/urgent.
