@@ -19,17 +19,23 @@
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events 
             resources: [], 
-            events: [],
+            events: [
+                {
+                    title: "Kevin's birthday",
+                    start: '2015-11-21',
+                    end: '2015-11-23',
+                }
+            ],
             header: {
                 left: 'prev next today',
                 center: 'title',
                 right: 'agendaDay, agendaWeek, month',
             },
-            eventClick: function(event) {
-                if (event.url) {
-                window.open(event.url);
-                return true;
-                }
+            eventClick: function (calEvent, jsEvent, view) {
+                var cancel = confirm("You are about to delete an event. Are you                   sure?");
+                if (cancel == true) {
+                    $('#calendar').fullCalendar('removeEvents', calEvent._id);
+                };
             },
             selectable: true,
 			selectHelper: true,
@@ -50,6 +56,10 @@
 		
 	});
 
+</script>
+<script>
+    var allevents = new.Array();
+    allevents = calendar.fullCalendar('clientEvents');
 </script>
 <style>
 
@@ -100,7 +110,7 @@
                     	<a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Launch Demo Modal</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about-me">Toggle List View</a>
+                        <a href="./list.html">Toggle List View</a>
                     </li>
                 </ul>
             </div>
@@ -110,6 +120,7 @@
     </nav>
 
 	<div id='calendar'></div>
+    <p id="allevents"></p>
 
 </body>
 </html>
